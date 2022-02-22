@@ -1,3 +1,5 @@
+import * as d3 from "https://unpkg.com/d3?module"
+
 const margin = {top: 60, left: 60, bottom: 20, right: 50}
 const width = 700 - margin.left - margin.right
 const height = 600 - margin.top - margin.bottom
