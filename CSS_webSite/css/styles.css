@@ -1,4 +1,5 @@
 body {
+    color: #40514E;
     margin: 0;
     text-align: center;
     font-family: 'Merriweather', serif;
@@ -16,19 +17,33 @@ h2 {
     color: #66BFBF;
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
 }
 h3 {
     color: #11999E;
     font-family: 'Montserrat', sans-serif;
 }
 hr{
-    margin-top: 50px;
-    background-color: white;
-    border-style: dotted none none;
-    border-width: thick;
-    border-color: grey;
+    margin: 100px auto;
+    border: dotted #dcf1f1 6px;
+    border-bottom: none;
     width: 5%;
 }
+p {
+    line-height: 2;
+}
+a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+a:hover {
+    color: #EAF6F6;
+}
+
 .junior {
     font-style: italic;
 }
@@ -38,7 +53,7 @@ hr{
    padding-top: 100px;
 }
 .middle-container {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .bottom-container {
     background-color: #66BFBF;
@@ -65,21 +80,16 @@ hr{
 .top-cloud {
     position:absolute;
     right:300px;
-    top:50px;
+    top:40px;
 }
 .bottom-cloud {
    position: absolute;
-   left:300px;
+   left:250px;
    bottom:300px;
 }
 .skill-row {
     margin-top:50px;
 }
-.footer-link{
-    margin: 10px;
-    padding: 10px;
-}
-
 .btn {
     background: #11cdd4;
     background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
@@ -90,14 +100,14 @@ hr{
     -webkit-border-radius: 8;
     -moz-border-radius: 8;
     border-radius: 8px;
-    font-family: Georgia;
+    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     background: #30e3cb;
     background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
     background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
@@ -105,11 +115,17 @@ hr{
     background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
     background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
     text-decoration: none;
-  }
+}
 
-  .contact-me {
-      margin-bottom: 50px;
-  }
-  .contactmeP {
-      margin-bottom:50px;  
-  }
+.contact-me {
+    width: 40%;
+    margin: 40px auto 60px;
+}
+.contactmeP {
+    margin-bottom:50px;  
+}
+.copyright {
+    color: #EAF6F6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
