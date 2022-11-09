@@ -185,7 +185,7 @@ p {
 
 /* Hero section */
 #hero{
-   background-image: url(./img/img1.jpeg);
+   background-image: url(img/img1.jpeg);
    background-color:black;
    background-size: cover;
    background-position: top center;
