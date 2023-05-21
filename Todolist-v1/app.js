@@ -9,10 +9,18 @@ const items = ["Buy food", "Cook food", "Eat food"]
 const workItems = []
 
 app.get("/", function(req, res){
-    //res.sendFile(__dirname + "/index.html")
-    res.render("list", {listTitle: date.getDay(), newListItems: items});
+    res.sendFile(__dirname + "/index.html")
+    //res.render("list", {listTitle: date.getDay(), newListItems: items});
 });
-app.post("/",function (req, res){
+app.post('/', function(req, res){
+    console.log("yh, here we are")
+    res.redirect('/list')
+})
+
+app.get('/list', function (req, res){
+    res.render("list", {listTitle: date.getDay(), newListItems: items});
+})
+app.post("/list",function (req, res){
     console.log(req.body)
     const item = req.body.newItem
     if(req.body.list == "Work"){
@@ -20,7 +28,7 @@ app.post("/",function (req, res){
         res.redirect("/work")
     }else{
         items.push(item)
-        res.redirect("/")
+        res.redirect("/list")
     }
 });
 
