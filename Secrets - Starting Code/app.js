@@ -27,16 +27,7 @@ app.get("/login", (req, res) => {
 app.get("/register", (req, res) => {
     res.render("register.ejs");
 })
-app.post("/register", async (req, res) => {
-    try{
-        await db.query("insert into account (email, password) values ($1, $2)", [req.body.username, req.body.password]);
-        console.log("added new account succefully");
-        res.render("secrets.ejs");
-    }
-    catch(err){
-        console.log(err)
-    }
-})
+
 app.post("/login", async (req, res) => {
     try{
         const result = await db.query(`select * from account where email = $1`, [req.body.username]);
@@ -45,6 +36,16 @@ app.post("/login", async (req, res) => {
     }
     catch(err){
         console.log(err);
+    }
+})
+app.post("/register", async (req, res) => {
+    try{
+        await db.query("insert into account (email, password) values ($1, $2)", [req.body.username, req.body.password]);
+        console.log("added new account succefully");
+        res.render("secrets.ejs");
+    }
+    catch(err){
+        console.log(err)
     }
 })
 
